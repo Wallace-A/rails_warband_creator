@@ -1,6 +1,14 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: $background-color;
+  border-bottom: 2px solid $border-color;
+  
+}
+.navbar-lewagon h1, p {
+  font-family: $body-font;
+  color: $text-white;
+  text-align: center;
+  margin: 0px;
 }
 
 .navbar-lewagon .navbar-collapse {

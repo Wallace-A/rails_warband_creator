@@ -1,11 +1,7 @@
-$bg_color: #140D2A;
-$dark_red: #eea2c8;
-$shadow_size: 8px;
-.footer {
-  background: $bg_color;
-  color: white;
-  text-shadow: 0 0 $shadow_size #eea2c8;
-  border-top: 2px solid $dark_red;
+footer {
+  background: $background_color;
+  color: $text-white;
+  border-top: 2px solid $border-color;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,14 +10,14 @@ $shadow_size: 8px;
   padding: 0px 50px;
   bottom: 0;
   left: 0;
+  margin-top: 32px;
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: white;
-  text-shadow: 0 0 $shadow_size #eea2c8;
+  color: $text-white;
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
@@ -30,6 +26,6 @@ $shadow_size: 8px;
 .footer-links a:hover {
   opacity: 1;
 }
-.footer .fa-heart {
+footer .fa-heart {
   color: #D23333;
 }

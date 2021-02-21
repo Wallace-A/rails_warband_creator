@@ -1,5 +1,7 @@
-<%= simple_form_for [@warband] do |f| %>  
-  <%= f.input :name %>
-  <%= f.submit "Add Warband", class: "btn btn-flat" %>
-<% end %>
-<%= link_to 'Go back', warbands_path, class: 'btn btn-flat' %>
+<div class="container-form">
+  <%= simple_form_for [@warband] do |f| %>  
+    <%= f.input :name %>
+    <%= f.submit "Add Warband", class: "btn btn-flat" %>
+  <% end %>
+  <%= link_to 'Go back', warbands_path, class: 'btn btn-flat' %>
+</div>

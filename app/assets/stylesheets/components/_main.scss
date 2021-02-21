@@ -1,0 +1,34 @@
+body{
+  font-family: $body-font;
+  color: $text-white;
+  background: $background-color;
+}
+
+h1{
+  font-family: $body-font;
+  color: $text-white;
+  margin: 8px;
+}
+.btn-flat{
+  background-color: $button-color;
+  color: $button-color-hover;
+  font-size: 1.1rem;
+  margin: 8px;
+  width: 200px;
+}
+.btn-flat:hover{
+  background-color: $button-color-hover;
+  color: $button-color;
+}
+.container-main{
+  width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.container-form{
+  width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
