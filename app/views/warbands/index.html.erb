@@ -3,12 +3,14 @@
 <% # WARBAND CARD GRID%>
 <%= link_to 'Add new warband', new_warband_path, class: 'btn btn-flat' %>
 <div class="warband-cards">
+  <div class="row">
   <% @warbands.each do |warband| %>
-    <div class="container-warband">
+    <div class="col-4">
       <%= link_to warband_path(warband) do %>
         <%= render "warbands/warband_card", :warband => warband%>
       <% end %>
-      
     </div>
   <% end %>
+</div>
+  
 </div>

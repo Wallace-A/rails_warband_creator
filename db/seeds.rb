@@ -9,9 +9,9 @@ puts "Cleaning database..."
 Warband.destroy_all
 
 puts "Creating warbands..."
-warband_1 = { name: "Charlotte's Cutthroats"}
-warband_2 =  { name: "Brandon's Bad Boys"}
-warband_3 =  { name: "Henry's Hatchetmen"}
+warband_1 = { name: "Charlotte's Cutthroats", value: 0}
+warband_2 =  { name: "Brandon's Bad Boys", value: 0}
+warband_3 =  { name: "Henry's Hatchetmen", value: 0}
 [ warband_1, warband_2, warband_3].each do |attributes|
   warband = Warband.create!(attributes)
   puts "Created #{warband.name}"

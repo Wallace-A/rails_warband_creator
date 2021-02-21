@@ -13,7 +13,7 @@
 <% #add fighter button %>
 <%= link_to 'Add a fighter', new_warband_fighter_path(@warband), class: 'btn btn-flat' %>
 <% #edit warband button %>
-<%= link_to "Edit Warband",edit_warband_path(@warband), class: 'btn btn-flat' %>
+<%= link_to "Edit Warband", edit_warband_path(@warband), class: 'btn btn-flat' %>
 <% #delete warband button %>
 <%= link_to "Delete Warband",warband_path(@warband), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-flat' %>
 <% #back button %>
