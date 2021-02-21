@@ -1,0 +1,11 @@
+<h1>edit</h1>
+<% if @warband.errors.any? %>
+    <% @warband.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+  <% end %>
+<%= simple_form_for [@warband] do |f| %>  
+  <%= f.input :name %>
+  <%= f.submit "Change name", class: "btn btn-flat" %>
+<% end %>
+<%= link_to 'Back', warband_path(@warband), class: 'btn btn-flat' %>

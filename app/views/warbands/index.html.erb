@@ -1,0 +1,14 @@
+<% # soem kind of banner%>
+<h1>WARBANDS INDEX</h1>
+<% # WARBAND CARD GRID%>
+<%= link_to 'Add new warband', new_warband_path, class: 'btn btn-flat' %>
+<div class="warband-cards">
+  <% @warbands.each do |warband| %>
+    <div class="container-warband">
+      <%= link_to warband_path(warband) do %>
+        <%= render "warbands/warband_card", :warband => warband%>
+      <% end %>
+      
+    </div>
+  <% end %>
+</div>

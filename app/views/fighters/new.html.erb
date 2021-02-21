@@ -1,0 +1,14 @@
+<h1>ADD A NEW FIGHTER TO</h1>
+<h1><%= @warband.name %></h1>
+
+<% if @fighter.errors.any? %>
+    <% @fighter.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+  <% end %>
+<%= simple_form_for [ @warband, @fighter ] do |f| %>  
+  <%= f.input :name %>
+  <%= f.input :role %>
+  <%= f.submit "Add Fighter", class: "btn btn-flat" %>
+<% end %>
+<%= link_to 'Back', warband_path(@warband), class: 'btn btn-flat' %>

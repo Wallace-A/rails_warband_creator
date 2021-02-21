@@ -1,0 +1,20 @@
+<% #warband name banner %>
+<h1><%= @warband.name %></h1>
+
+<% #fighter details? %>
+<div class="fighter-cards">
+  <% @warband.fighters.each do |fighter| %>
+    <div class="container-fighter">
+      <%= render "fighters/fighter_card", :fighter => fighter%>
+
+    </div>
+  <% end %>
+</div>
+<% #add fighter button %>
+<%= link_to 'Add a fighter', new_warband_fighter_path(@warband), class: 'btn btn-flat' %>
+<% #edit warband button %>
+<%= link_to "Edit Warband",edit_warband_path(@warband), class: 'btn btn-flat' %>
+<% #delete warband button %>
+<%= link_to "Delete Warband",warband_path(@warband), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-flat' %>
+<% #back button %>
+<%= link_to 'Go back', warbands_path, class: 'btn btn-flat' %>

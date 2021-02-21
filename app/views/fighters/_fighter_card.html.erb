@@ -1,0 +1,6 @@
+<div class="card-fighter" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/400x200/?vikings)">
+  <%= fighter.name + fighter.role%>
+  <%= link_to warband_fighter_path(fighter), method: :delete, data: { confirm: "Are you sure?" } do %>
+    <i class="fas fa-times"></i>
+  <% end %>
+</div>
