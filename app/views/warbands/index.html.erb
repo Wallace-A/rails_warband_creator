@@ -5,10 +5,10 @@
 <% # WARBAND CARD GRID%>
 <%= link_to 'Assemble Warband', new_warband_path, class: 'btn btn-flat' %>
 <div class="warband-cards">
-  <div class="row">
+  <div class="row justify-content-center p-1">
   <% @warbands.each do |warband| %>
     <div class="col-4">
-      <%= link_to warband_path(warband) do %>
+      <%= link_to warband_path(warband), class: "no-underline" do %>
         <%= render "warbands/warband_card", :warband => warband%>
       <% end %>
     </div>

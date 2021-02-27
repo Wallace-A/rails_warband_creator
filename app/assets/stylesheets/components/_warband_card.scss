@@ -1,25 +1,48 @@
 .card-warband {
-  background-size: cover;
-  background-position: center;
+  /*fixed*/
+  display: flex;
+  flex-direction: column;
+  /*customizable*/
+  height: 300px;
+  border-radius: 4px;
   background-color: $card-bg-color;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: $text-white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0px 16px rgba(0,0,0,0.3);
   margin: 8px;
 }
 
-.card-warband-image{
-  width:100%;
-  object-fit: cover
+.card-warband-image {
+  /*fixed*/
+  width: 100%;
+  min-height: 100px;
+  flex-grow: 1;
+  object-fit: cover;
+  /*customizable*/
+  object-position: 50% 50%;
+  border-radius: 4px 4px 0 0;
 }
 
-.card-title{
+.card-warband-info {
+  /*customizable*/
+  padding: 16px;
+  color: $text-white;
   font-family: $body-font;
+}
+
+.card-warband-info h5 {
+  /*customizable*/
+  font-family: $body-font;
+  text-decoration: none !important;
+}
+
+.card-warband-info h2 {
+  /*customizable*/
+  text-decoration: none !important;
+}
+.no-underline {text-decoration: none! important;}
+.card-warband:hover {
+  /*customizable*/
+  transition: 0.2s ease-out;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  
 }

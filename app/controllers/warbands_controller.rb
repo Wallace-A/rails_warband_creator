@@ -25,7 +25,7 @@ class WarbandsController < ApplicationController
 
   def destroy
     @warband.destroy
-    redirect_to "index"
+    redirect_to warbands_path
   end
 
   def edit

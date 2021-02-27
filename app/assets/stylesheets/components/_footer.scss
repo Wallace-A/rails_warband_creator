@@ -1,3 +1,4 @@
+.footer {
 .footer-main {
   background: $background_color;
   color: $text-white;
@@ -6,11 +7,9 @@
   align-items: center;
   justify-content: space-between;
   height: 100px;
-  width:100%;
   padding: 0px 50px;
-  bottom: 0;
-  left: 0;
-  margin-top: 32px;
+  color: $text-white;
+  border-top: 2px solid $border-color;
 }
 .footer-links {
   display: flex;
@@ -25,6 +24,6 @@
 .footer-links a:hover {
   color: $button-color;
 }
-footer .fa-heart {
+.footer .fa-heart {
   color: #D23333;
 }
