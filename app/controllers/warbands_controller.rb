@@ -49,6 +49,6 @@ class WarbandsController < ApplicationController
   end
 
   def warband_params
-    params.require(:warband).permit(:name)
+    params.require(:warband).permit(:name, :faction, :photo)
   end
 end

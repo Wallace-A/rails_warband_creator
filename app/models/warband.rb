@@ -4,5 +4,4 @@ class Warband < ApplicationRecord
   FACTIONS =["the living", "the dead"]
   validates :name, presence: true, uniqueness: true
   validates :faction, presence:true
-  validates :role, presence:true
 end

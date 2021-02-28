@@ -1,5 +1,6 @@
 <div class="card-warband">
-  <%= image_tag "https://source.unsplash.com/400x200/?vikings", class: "card-warband-image", alt: "warband.img" %>
+  <div class="card-warband-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%=  cl_image_path (warband.photo.attached? ? warband.photo.key : 'https://source.unsplash.com/450x300/?viking'), height: 300, width: 450, crop: :fill %>')">
+  </div>
   <div class="card-warband-info">
     <h4 class="card-title"><%= warband.name %></h4>
     <p class="card-text"><%= warband.faction %></p>
