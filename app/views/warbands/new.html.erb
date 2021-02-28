@@ -1,6 +1,8 @@
 <div class="container-form">
   <%= simple_form_for [@warband] do |f| %>  
     <%= f.input :name %>
+    <%= f.input :faction, collection: Warband::FACTIONS, include_blank: false, style: "m-1" %>
+    <%= f.input :photo, required: false, as: :file , class: "btn btn-outline-danger mb-3" %>
     <%= f.submit "Add Warband", class: "btn btn-flat" %>
   <% end %>
   <%= link_to 'Go back', warbands_path, class: 'btn btn-flat' %>

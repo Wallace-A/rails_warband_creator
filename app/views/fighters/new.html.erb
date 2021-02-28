@@ -7,7 +7,7 @@
     <% end %>
   <%= simple_form_for [ @warband, @fighter ] do |f| %>  
     <%= f.input :name %>
-    <%= f.input :role %>
+    <%= f.input :role, collection: Fighter::ROLES, include_blank: false, style: "m-1" %>
     <%= f.submit "Add Fighter", class: "btn btn-flat" %>
   <% end %>
   <%= link_to 'Back', warband_path(@warband), class: 'btn btn-flat' %>

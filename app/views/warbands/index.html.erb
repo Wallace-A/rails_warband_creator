@@ -7,7 +7,7 @@
 <div class="warband-cards">
   <div class="row justify-content-center p-1">
   <% @warbands.each do |warband| %>
-    <div class="col-4">
+    <div class="col-xs-12 col-sm-6 col-md-4">
       <%= link_to warband_path(warband), class: "no-underline" do %>
         <%= render "warbands/warband_card", :warband => warband%>
       <% end %>
