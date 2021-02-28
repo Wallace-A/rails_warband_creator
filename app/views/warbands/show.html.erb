@@ -1,20 +1,36 @@
-
-<h1><%= @warband.name %></h1>
-<% #fighter details? %>
-<% #add fighter button %>
-<%= link_to 'Recruit Fighter', new_warband_fighter_path(@warband), class: 'btn btn-flat' %>
-<% #edit warband button %>
-<%= link_to "Edit Name", edit_warband_path(@warband), class: 'btn btn-flat' %>
-<% #delete warband button %>
-<%= link_to "Disband",warband_path(@warband), method: :delete, data: { confirm: "Are you sure you want to disband this warband?" }, class: 'btn btn-flat' %>
-<% #back button %>
-<%= link_to 'Go back', warbands_path, class: 'btn btn-flat' %> 
-<div class="fighter-cards">
-  <% @warband.fighters.each do |fighter| %>
-    <div class="container-fighter">
-      <%= render "fighters/fighter_card", :fighter => fighter%>
-
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%=  cl_image_path (@warband.photo.attached? ? @warband.photo.key : 'https://source.unsplash.com/450x300/?viking'), height: 300, width: 450, crop: :fill %>')">
+      <%= @warband.name %>
     </div>
-  <% end %>
+  </div>
 </div>
+<div class="row justify-content-center">
+  <div class="col-8">
+    <% #fighter details? %>
+    <% #add fighter button %>
+    <%= link_to 'Recruit Fighter', new_warband_fighter_path(@warband), class: 'btn btn-flat' %>
+    <% #edit warband button %>
+    <%= link_to "Edit Name", edit_warband_path(@warband), class: 'btn btn-flat' %>
+    <% #delete warband button %>
+    <%= link_to "Disband",warband_path(@warband), method: :delete, data: { confirm: "Are you sure you want to disband this warband?" }, class: 'btn btn-flat' %>
+    <% #back button %>
+    <%= link_to 'Go back', warbands_path, class: 'btn btn-flat' %> 
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div class="fighter-cards">
+      <% @warband.fighters.each do |fighter| %>
+        <div class="container-fighter">
+          <%= render "fighters/fighter_card", :fighter => fighter%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
 
